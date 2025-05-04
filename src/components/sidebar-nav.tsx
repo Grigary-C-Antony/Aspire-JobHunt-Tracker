@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import {
@@ -70,10 +69,10 @@ const SidebarNav = ({ className }: SidebarNavProps) => {
 
   return (
     <>
-      <Button 
-        variant="outline" 
-        size="icon" 
-        onClick={toggleSidebar} 
+      <Button
+        variant="outline"
+        size="icon"
+        onClick={toggleSidebar}
         className={cn(
           "fixed top-4 left-4 z-50 md:hidden",
           isOpen ? "left-[250px]" : "left-4"
@@ -81,12 +80,14 @@ const SidebarNav = ({ className }: SidebarNavProps) => {
       >
         <Menu className="h-[1.2rem] w-[1.2rem]" />
       </Button>
-      <div className={cn(
-        "fixed inset-y-0 left-0 z-40 w-64 flex flex-col bg-sidebar text-sidebar-foreground transition-transform duration-300 ease-in-out",
-        isOpen ? "translate-x-0" : "-translate-x-full",
-        "md:translate-x-0",
-        className
-      )}>
+      <div
+        className={cn(
+          "fixed inset-y-0 left-0 z-40 w-64 flex flex-col bg-sidebar text-sidebar-foreground transition-transform duration-300 ease-in-out",
+          isOpen ? "translate-x-0" : "-translate-x-full",
+          "md:translate-x-0",
+          className
+        )}
+      >
         <div className="flex items-center justify-between px-6 py-6">
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
@@ -95,7 +96,7 @@ const SidebarNav = ({ className }: SidebarNavProps) => {
             <span className="text-xl font-bold tracking-tight">Aspire</span>
           </Link>
         </div>
-        
+
         <nav className="flex-1 px-4 py-4 space-y-1 overflow-y-auto">
           {navItems.map((item) => (
             <Link
@@ -113,7 +114,7 @@ const SidebarNav = ({ className }: SidebarNavProps) => {
             </Link>
           ))}
         </nav>
-        
+
         <div className="px-4 py-4 border-t border-sidebar-border">
           <div className="flex items-center justify-between mb-4">
             <ModeToggle />
@@ -129,15 +130,17 @@ const SidebarNav = ({ className }: SidebarNavProps) => {
               <Settings className="h-5 w-5" />
             </Link>
           </div>
-          
+
           <div className="flex items-center px-4 py-3">
             <div className="flex-shrink-0">
               <div className="h-8 w-8 rounded-full bg-sidebar-accent flex items-center justify-center">
-                <span className="text-sm font-medium">JD</span>
+                <span className="text-sm font-medium">🐦‍🔥</span>
               </div>
             </div>
             <div className="ml-3">
-              <p className="text-sm font-medium">John Doe</p>
+              <p className="text-sm font-medium" contentEditable>
+                John Doe
+              </p>
               <p className="text-xs text-sidebar-foreground/60">Job Seeker</p>
             </div>
           </div>
